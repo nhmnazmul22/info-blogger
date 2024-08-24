@@ -1,0 +1,96 @@
+/*-----------------------------------*\
+  # Register and Login Page Styling
+\*-----------------------------------*/
+.form-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.form-card {
+  box-shadow: 0px 0px 8px -3px rgba(255, 255, 255, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 500px;
+  min-width: 300px;
+  background: var(--surface-container-dark);
+}
+.card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.card-header p {
+  font-size: var(--fs-body-large);
+}
+.logo img {
+  margin: 0 auto;
+}
+.text-field-wrapper {
+  margin-bottom: 2rem;
+  box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-extra-small);
+  position: relative;
+  height: 45px;
+}
+.text-field-wrapper:focus-within {
+  border: 1px solid var(--primary-dark);
+}
+
+.text-field-wrapper .label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  color: var(--outline-dark);
+}
+.text-field-wrapper:focus-within .label {
+  color: var(--primary-dark);
+}
+.text-field-wrapper:focus-within .label,
+.text-field-wrapper:has(.text-field:not(:placeholder-shown)) .label {
+  top: -5px;
+  left: 10px;
+  font-size: var(--fs-label-medium);
+  background: var(--surface-container-dark);
+  padding: 0rem 0.8rem;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.text-field-wrapper.error {
+  border: 2px solid var(--on-error-dark);
+  box-shadow: none;
+}
+.text-field-wrapper.error:focus-within {
+  margin-bottom: 3rem;
+}
+.text-field-wrapper.error:focus-within .label {
+  color: var(--on-error-dark);
+}
+
+.text-field-wrapper .text-field {
+  font-size: var(--fs-body-medium);
+  color: var(--on-background-dark);
+  padding: 0.5rem 0.5rem 0.5rem 0.8rem;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+.card-footer {
+  text-align: center;
+  margin: 1rem 0 0 0;
+}
+.card-footer a {
+  color: var(--primary-dark);
+}
+.card-footer a:hover {
+  text-decoration: underline;
+}
+
+:is(.btn-fill)[disabled] {
+  background-color: var(--on-surface-disabled-dark);
+  color: var(--on-surface-disabled-text-dark);
+  pointer-events: none;
+  user-select: none;
+}

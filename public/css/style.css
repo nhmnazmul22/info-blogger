@@ -1,0 +1,191 @@
+/*-----------------------------------*\
+ * Fonts
+\*-----------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+:root {
+  /**
+   * COLORS
+   */
+  --backdrop-background: #000000;
+  /* Dark theme */
+  --primary-dark: #a3c9fe;
+  --on-primary-dark: #00315b;
+  --tertiary-dark: #d8bde3;
+  --on-tertiary-dark: #3c2947;
+  --background-dark: #111418;
+  --on-background-dark: #e1e2e8;
+  --surface-dark: #111418;
+  --surface-container-dark: #1d2024;
+  --surface-container-highest-dark: #32353a;
+  --on-surface-dark: #e1e2e8;
+  --on-surface-disabled-dark: #e1e2e81f;
+  --on-surface-disabled-text-dark: #e1e2e861;
+  --surface-variant-dark: #43474e;
+  --on-surface-variant-dark: #c3c6cf;
+  --outline-dark: #8d9199;
+  --outline-variant-dark: #43474e;
+  --secondary-container-dark: #3c4758;
+  --on-secondary-container-dark: #d7e3f8;
+  --error-dark: #ffb4ab;
+  --on-error-dark: #ff4261;
+  --on-error-container-dark: #ffdad6;
+  --inverse-primary-dark: #39608f;
+  --inverse-surface-dark: #e1e2e8;
+  --inverse-on-surface-dark: #2e3035;
+
+  /* Font family */
+  --font-primary: "Poppins", sans-serif;
+  --font-monospace: "League Spartan", sans-serif;
+
+  /* Font size */
+  --fs-base: 62.5%;
+  --fs-display-large: 5.7rem;
+  --fs-display-medium: 4.5rem;
+  --fs-display-small: 3.6rem;
+  --fs-headline-large: 3.2rem;
+  --fs-headline-medium: 2.8rem;
+  --fs-headline-small: 2.4rem;
+  --fs-title-large: 2.2rem;
+  --fs-title-medium: 1.6rem;
+  --fs-title-small: 1.4rem;
+  --fs-body-large: 1.6rem;
+  --fs-body-medium: 1.4rem;
+  --fs-body-small: 1.2rem;
+  --fs-label-large: 1.4rem;
+  --fs-label-medium: 1.2rem;
+  --fs-label-small: 1.1rem;
+
+  /* Line height */
+  --lh-display-large: 64px;
+  --lh-display-medium: 52px;
+  --lh-display-small: 44px;
+  --lh-headline-large: 40px;
+  --lh-headline-medium: 36px;
+  --lh-headline-small: 32px;
+  --lh-title-large: 28px;
+  --lh-title-medium: 24px;
+  --lh-title-small: 20px;
+  --lh-body-large: 24px;
+  --lh-body-medium: 20px;
+  --lh-body-small: 16px;
+  --lh-label-large: 20px;
+  --lh-label-medium: 16px;
+  --lh-label-small: 16px;
+
+  /* Font weight */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* Letter spacing */
+  --ls-n-025: -0.25px;
+  --ls-p-010: 0.1px;
+  --ls-p-015: 0.15px;
+  --ls-p-025: 0.25px;
+  --ls-p-040: 0.4px;
+  --ls-p-050: 0.5px;
+
+  /**
+   * BORDER RADIUS
+   */
+  --radius-extra-small: 4px;
+  --radius-small: 8px;
+  --radius-medium: 12px;
+  --radius-large: 16px;
+  --radius-extra-large: 28px;
+  --radius-full: 1000px;
+}
+
+/*-----------------------------------*\
+  #UTILITY
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+img,
+span,
+label,
+input,
+button,
+textarea {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-family: var(--font-primary);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--on-surface-disabled-dark);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--outline-dark);
+  border-radius: var(--radius-full);
+}
+
+
+html {
+  font-size: var(--fs-base);
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--background-dark);
+  color: var(--on-background-dark);
+  font-family: var(--font-primary);
+  font-size: var(--fs-body-medium);
+  line-height: var(--lh-body-medium);
+  font-weight: var(--fw-regular);
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.container {
+  max-width: 1400px;
+  width: 85%;
+  margin: 0 auto;
+}
+.btn-primary {
+  background: var(--primary-dark);
+  padding: 1rem;
+  cursor: pointer;
+  font-size: var(--fs-body-medium);
+  border-radius: var(--radius-full);
+  font-weight: var(--fw-medium);
+}
+

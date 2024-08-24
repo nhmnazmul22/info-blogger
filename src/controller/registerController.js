@@ -9,7 +9,11 @@ const renderRegister = (req, res) => {
   res.render("pages/register");
 };
 
+// post user data
+const postRegister = (req, res) => {};
+
 // export module
 module.exports = {
   renderRegister,
+  postRegister,
 };

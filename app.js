@@ -15,6 +15,9 @@ const app = express();
 // ========== setting view engine ========
 app.set("view engine", "ejs");
 
+// ========== setting static directory ========
+app.use(express.static(`${__dirname}/public`));
+
 // ========== Api End point ========
 app.use("/register", register);
 
