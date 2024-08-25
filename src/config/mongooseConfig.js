@@ -14,6 +14,7 @@ const clientOpt = {
     strict: true,
     deprecationErrors: true,
   },
+  dbName: "Info-Blogger",
 };
 
 // ========== connect the mongoDB using connection string ==========

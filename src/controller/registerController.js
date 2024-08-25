@@ -16,7 +16,7 @@ const renderRegister = (req, res) => {
   res.render("pages/register");
 };
 
-// ========== post user data ==========
+// ========== Save user data in server ==========
 const postRegister = async (req, res) => {
   try {
     // Destructuring the user data
@@ -29,7 +29,29 @@ const postRegister = async (req, res) => {
     await User.create({ name, username, email, password: hashedPassword });
     // redirect the user to login page
     res.redirect("/login");
-  } catch (error) {}
+  } catch (error) {
+    // handling error for unique value
+    if (error.code === 11000) {
+      if (error.keyPattern.email) {
+        return res.status(400).send({
+          message: "This email is already associate in another account",
+        });
+      }
+      if (error.keyPattern.username) {
+        return res.status(400).send({
+          message: "This is username already use in another account",
+        });
+      }
+    } else {
+      return res.status(400).send({
+        message: `Field to register user. <br/> ${error.message}`,
+      });
+    }
+
+    // log the error to see why error occurred
+    console.log("postRegister Error", error.message);
+    throw error;
+  }
 };
 
 // ========== export module ==========
