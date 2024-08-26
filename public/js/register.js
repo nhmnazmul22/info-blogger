@@ -57,4 +57,12 @@ form.addEventListener("submit", async (event) => {
       type: "error",
     });
   }
+  // handler error when user request url not found or when status code is 404
+  if (response.status === 404) {
+    submitBtn.removeAttribute("disabled");
+    Snackbar({
+      message: "Your requested url not found!!",
+      type: "error",
+    });
+  }
 });
