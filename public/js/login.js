@@ -21,22 +21,12 @@ form.addEventListener("submit", async (event) => {
   // create formData object to capture form data
   const formData = new FormData(form);
 
-  // submit button enable and show error message when password and confirm password don't match
-  if (formData.get("password") !== formData.get("confirmPassword")) {
-    submitBtn.removeAttribute("disabled");
-    // show snackbar when error ocurred
-    Snackbar({
-      message: "Password and Confirm password don't match. Please, try again!!",
-      type: "error",
-    });
-    return;
-  }
   // Send account create request to server
   const body = new URLSearchParams(
     Object.fromEntries(formData.entries())
   ).toString();
 
-  const response = await fetch(`${window.location.origin}/register`, {
+  const response = await fetch(`${window.location.origin}/login`, {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: body,

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include("../layout/head.ejs", {title: "Register | Info Blogger"}) %>
+    <%- include("../layout/head.ejs", {title: "Login | Info Blogger"}) %>
     <link rel="stylesheet" href="/css/singInUp.css" />
-    <script type="module" src="/js/register.js" defer></script>
+    <script type="module" src="/js/login.js" defer></script>
   </head>
   <body>
     <section class="section from-section">
@@ -21,19 +21,6 @@
               <p>Join Info Blogger Community</p>
             </div>
             <form action="" class="form" data-form>
-              <div class="text-field-wrapper">
-                <label for="name" class="label">Full Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  class="text-field"
-                  placeholder=""
-                  autofocus
-                  autocomplete="off"
-                  required
-                />
-              </div>
               <div class="text-field-wrapper">
                 <label for="email" class="label">Email</label>
                 <input
@@ -58,31 +45,17 @@
                   required
                 />
               </div>
-              <div class="text-field-wrapper">
-                <label for="confirmPassword" class="label"
-                  >Confirm password</label
-                >
-                <input
-                  type="password"
-                  name="confirmPassword"
-                  id="confirmPassword"
-                  class="text-field"
-                  placeholder=""
-                  minlength="8"
-                  required
-                />
-              </div>
               <button
                 type="submit"
                 class="btn-primary btn-fill"
                 data-submit-btn
               >
-                <p>Sing Up</p>
+                <p>Sing In</p>
               </button>
             </form>
             <div class="card-footer">
-              <p>Already have an account?</p>
-              <a href="/login">Sing in</a>
+              <p>If you don't have any account?</p>
+              <a href="/register">Sing In</a>
             </div>
           </div>
         </div>
